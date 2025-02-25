@@ -1,190 +1,46 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saoskincare - Products</title>
-  <style>
-    /* Body Styling */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      animation: backgroundSlideshow 20s infinite;
-    }
 
-    /* Keyframe for slideshow */
-    @keyframes backgroundSlideshow {
-      0% {
-        background-image: url('https://images.unsplash.com/photo-1562184648-941da5be306e');
-      }
-      33% {
-        background-image: url('https://images.unsplash.com/photo-1521747116042-5baed6a2f97f');
-      }
-      66% {
-        background-image: url('https://images.unsplash.com/photo-1601587765799-68db118da0c8');
-      }
-      100% {
-        background-image: url('https://images.unsplash.com/photo-1593642634341-1c10d5d8e9e4');
-      }
-    }
+<meta charset="UTF-8">
 
-    /* Header Styling */
-    header {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: red;
-      text-align: center;
-      padding: 10px 0;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    h1 {
-      color: red;
-    }
+<title>My First GitHub Page</title>
 
-    h2 {
-      color: red;
-    }
-
-    /* Product Card Styling */
-    .product-card {
-      display: inline-block;
-      width: 200px;
-      margin: 15px;
-      text-align: center;
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 8px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Footer Styling */
-    footer {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Saoskincare</h1>
-    <p>nourish your skin, nourish your soul</p>
-  </header>
+<header>
 
-  <!-- Main Section -->
-  <main>
-    <h2>Our Featured Products</h2>
+<h1>Welcome to My Website!</h1>
 
-    <!-- Product Cards Loop -->
-    <div id="product-list"></div>
-  </main>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Mrs. Atlasaone - All Rights Reserved</p>
-  </footer>
 
-  <script>
-    // Array of product objects (6 products)
-    const products = [
-      {
-        name: "Facial Cleanser",
-        price: "P100.00",
-        description: "Gentle and soothing for all skin types.",
-        img: "https://ts4.mm.bing.net/th?id=OIP.pMAyCtJJqBWk0K2ibdxvEAHaHa&pid=15.1"
-      },
-      {
-        name: "Moisturizer",
-        price: "P80.00",
-        description: "Hydrate and refresh your skin with this nourishing moisturizer for dry skin.",
-        img: "https://th.bing.com/th?id=OIP.aLLyJ2t93rQoIHK4VQBOlQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-      },
-      {
-        name: "Anti-Aging Serum",
-        price: "P65.00",
-        description: "Reduce the appearance of fine lines and wrinkles with this serum.",
-        img: "https://th.bing.com/th?id=OIP.MniQO1gz50e9OfVc20hIXAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-      },
-      {
-        name: "Vitamin C Serum",
-        price: "P95.00",
-        description: "Brighten and even out your skin tone with this Vitamin C-packed serum.",
-        img: "https://th.bing.com/th?id=OIP.EbwO1cFGFhWmleOU8Cx1uQHaHX&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-      },
-      {
-        name: "Night Cream",
-        price: "P120.00",
-        description: "Nourish and repair your skin overnight with this rich night cream.",
-        img: "https://th.bing.com/th/id/OIP.Q24Gk6gnhTMSsIkF2EOiwQHaHa?w=194&h=193&c=7&r=0&o=5&pid=1.7"
-      },
-      {
-      
-      
-    ];
+<main>
 
-    // Loop through the products array and create HTML dynamically
-    const productList = document.getElementById('product-list');
-    products.forEach(product => {
-      const productCard = `
-        <div class="product-card">
-          <img src="${product.img}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p><strong>${product.price}</strong></p>
-          <p>${product.description}</p>
-        </div>
-      `;
-      productList.innerHTML += productCard; // Add each product to the product list
-    });
-  </script>
+<p>This is a simple webpage hosted on GitHub Pages.</p>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>About Saoskincare</h2>
-    <p>At Saoskincare, we are passionate about providing high-quality skincare products that enhance your natural beauty. Our products are carefully crafted to nourish and protect your skin, leaving it feeling fresh and rejuvenated.</p>
-  </section>
+<p>Here's a picture of a cute cat:</p>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or feedback, feel free to reach out!</p>
+<img src="https://placekitten.com/200/300" alt="A cute kitten">
 
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <form action="submit_form.php" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="instagram" placeholder="Instagram Username">
-        <input type="text" name="facebook" placeholder="Facebook Username">
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Mrs. Atlasaone - All Rights Reserved</p>
-  </footer>
+<p>Visit <a href="https://github.com">GitHub</a> to learn more about coding.</p>
+
+</main>
+
+
+<footer>
+
+<p>&copy; 2025 Atlasaone Neo</p>
+
+</footer>
 
 </body>
 
 </html>
-

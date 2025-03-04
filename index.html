@@ -6,55 +6,67 @@
     <title>Sao Skincare</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffe6f2;
-    margin: 0;
-    padding: 0;
-}
-header {
-    background: #ff99cc;
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-}
-.slideshow-container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-.slide {
-    width: 100%;
-    display: none;
-}
-.promotions {
-    background: #ff66b2;
-    padding: 20px;
-    color: white;
-    margin-top: 20px;
-    font-size: 18px;
-}
-button {
-    background: #ff3399;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-footer {
-    background: #ff4d94;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ff99cc;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .slideshow-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            width: 100%;
+            display: none;
+        }
+        .promotions {
+            background: #ff66b2;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        button {
+            background: #ff3399;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        footer {
+            background: #ff4d94;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Sao Skincare</h1>
-        <p>Elevate Your Skincare Rival</p>
+        <p>Elevate Your Skincare Ritual</p>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -64,45 +76,42 @@ footer {
     
     <!-- Image Slideshow -->
     <div class="slideshow-container">
-<img class="slide" src="https://www.pinterest.com/pin/845621267522546721/" alt=Skincare
-1">
-<img class="slide" src"https://www.pinterest.com/pin/137289488923245491/" alt=Skincare
-2"> <img class="slide" src"https://www.pinterest.com/pin/137289488818321393/" alt=Skincare
-3">
-<div>
-<!--Promotions-->
-<section class="promotions">
-<h2>Exclusive Deals &Discounts</h2>
-<p>Get up to <span class="highlight">50%
-OFF</span>on selected skincare bundles!</p>
-<button>Shop now</button>
-</section>
+        <img class="slide" src="https://th.bing.com/th/id/OIP.2dZ9B19-g_X6jp8OZrNA_wHaJ4?w=3467&h=4623&rs=1&pid=ImgDetMain" alt="Skincare Image 1">
+        <img class="slide" src="https://i.ebayimg.com/images/g/SWIAAOSwy3RnnQXM/s-l500.webp" alt="Skincare Image 2">
+        <img class="slide" src="https://i.ebayimg.com/images/g/RvMAAOSwEHJjx9fj/s-l1600.webp" alt="Skincare Image 3">
+    </div>
 
-<!contact Information-->
-<footer>
-<p>Contact us:neoatlasaone@gmail.com|
-72553211 & 71512885</p>
-<p>Follow us:
-<a href="https:/instagram.com
-/SaoSkincare
-<a href="https://facebook.com/SaoSkincare">Facebook</a> |
-<a href="https://tiktok.com/@sao_skincare">TikTok</a>
+    <!-- Promotions Section -->
+    <section class="promotions">
+        <h2>Exclusive Deals & Discounts</h2>
+        <p>Get up to <span class="highlight">50% OFF</span> on selected skincare bundles!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Contact Information -->
+    <footer>
+        <p>Contact us: <a href="mailto:neoatlasaone@gmail.com">neoatlasaone@gmail.com</a> | Phone: 72553211, 71512885</p>
+        <p>Follow us: 
+            <a href="https://instagram.com/SaoSkincare" target="_blank">Instagram</a> |
+            <a href="https://facebook.com/SaoSkincare" target="_blank">Facebook</a> |
+            <a href="https://tiktok.com/@sao_skincare" target="_blank">TikTok</a>
         </p>
     </footer>
-   let slideIndex = 0;
-showSlides();
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-        </script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
 </html>

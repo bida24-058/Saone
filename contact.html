@@ -1,47 +1,148 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
 
-<meta charset="UTF-8">
+    <!-- Adding some basic styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-<title>Contact Me</title>
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-
-<h1>Contact Me</h1>
-
-<nav>
-
-<a href="index.html">Home</a> |
-
-<a href="about.html">About</a> |
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
+    <h1>Contact Me</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-
 <main>
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or through the contact form below:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="neoatlasaone@gmail.com</a></li>
+            <li><strong>Phone:</strong> (126)71614129</li>
+            <li><strong>LinkedIn:</strong> <a href="https://Saoskincare" target="_blank">Your LinkedIn</a></li>
+            <li><strong>Twitter:</strong> <a href="https://twitter.com/Saoskincare" target="_blank">@Saoskincare</a></li>
+        </ul>
+    </section>
 
-<p>If you'd like to get in touch, feel free to email me at <a href="mailto:example@example.com">example@example.com</a>.</p>
+    <section>
+        <h2>Send a Message</h2>
+        <form action="your-server-endpoint" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
 </main>
 
-
 <footer>
-
-<p>&copy; 2025 Your Name</p>
-
+    <p>&copy; 2025 Atlasaone Neo. All rights reserved.</p>
 </footer>
 
 </body>

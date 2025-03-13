@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6f2;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #ff99cc;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+.slideshow-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    width: 100%;
+    display: none;
+}
+.promotions {
+    background: #ff66b2;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
+button {
+    background: #ff3399;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer {
+    background: #ff4d94;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -50,6 +50,38 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .product-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 20px;
+            color: #ff3399;
+        }
+        .product p {
+            color: #555;
+            font-size: 16px;
+        }
+        .product .price {
+            color: #ff66b2;
+            font-size: 18px;
+            margin-top: 10px;
+        }
         footer {
             background: #ff4d94;
             color: white;
@@ -73,12 +105,16 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    
+
     <!-- Image Slideshow -->
     <div class="slideshow-container">
         <img class="slide" src="https://th.bing.com/th/id/OIP.2dZ9B19-g_X6jp8OZrNA_wHaJ4?w=3467&h=4623&rs=1&pid=ImgDetMain" alt="Skincare Image 1">
         <img class="slide" src="https://i.ebayimg.com/images/g/SWIAAOSwy3RnnQXM/s-l500.webp" alt="Skincare Image 2">
         <img class="slide" src="https://i.ebayimg.com/images/g/RvMAAOSwEHJjx9fj/s-l1600.webp" alt="Skincare Image 3">
+        <!-- Add More Images -->
+        <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuBR8Jbf_tb4-hti1gFwed6OiI3geGja6LoOMakOAFwKB0jhPPWzr_Vt8&s" alt="Product Image 4">
+        <img class="slide" src="https://imerikamarie.com/best-skincare-products-for-dry-skin/" alt="Product Image 5">
+        <img class="slide" src"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAGbrKm-gZgQs-JyFpUSLSABv6Qc2sFZNgA&s" alt="Product Image 6">
     </div>
 
     <!-- Promotions Section -->
@@ -86,6 +122,31 @@
         <h2>Exclusive Deals & Discounts</h2>
         <p>Get up to <span class="highlight">50% OFF</span> on selected skincare bundles!</p>
         <button>Shop Now</button>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-section">
+        <!-- Product 1 -->
+        <div class="Vitamin C serum mosturizer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrlA83B5RPYQhWjiLWcYUnHdLWyubTHvW8JnzDV3E7-r6zOu3hOaiErwc&s" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Experience glowing skin with this luxurious moisturizer.</p>
+            <p class="price">P100.00</p>
+        </div>
+        <!-- Product 2 -->
+        <div class="Anti-aging serum">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc3rRM_4eYc-lLN0yW47U8QG3jCFX6lQydrw&s" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Reduce fine lines and wrinkles with our anti-aging serum.</p>
+            <p class="price">P85.99</p>
+        </div>
+        <!-- Product 3 -->
+        <div class="Facial cleanser">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrANT6Xy038-WF5yGM4ehRwu8SlZl7mlauMA&s" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Achieve clear skin with our acne-fighting facial cleanser.</p>
+            <p class="price">P250.50</p>
+        </div>
     </section>
 
     <!-- Contact Information -->

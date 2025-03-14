@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Skincare Products | Sao Skincare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ff99cc;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .product-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+        }
+        .product h3 {
+            font-size: 20px;
+            color: #ff3399;
+        }
+        .product p {
+            color: #555;
+            font-size: 16px;
+        }
+        .product .price {
+            color: #ff66b2;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .slideshow-container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .slide {
+            width: 100%;
+            display: none;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background: #ff4d94;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sao Skincare</h1>
+        <p>Explore Our Premium Skincare Products</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="products.html">Products</a> <!-- Link to the new products page -->
+        </nav>
+    </header>
+
+    <!-- Product Showcase Section -->
+    <section class="product-section">
+        <!-- Product 1 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+1+Image+1" alt="Product 1 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+1+Image+2" alt="Product 1 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+1+Image+3" alt="Product 1 Image 3">
+            </div>
+            <h3>Product 1</h3>
+            <p>Experience glowing skin with this luxurious moisturizer.</p>
+            <p class="price">P100.00</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+2+Image+1" alt="Product 2 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+2+Image+2" alt="Product 2 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+2+Image+3" alt="Product 2 Image 3">
+            </div>
+            <h3>Product 2</h3>
+            <p>Reduce fine lines and wrinkles with our anti-aging serum.</p>
+            <p class="price">P85.99</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+3+Image+1" alt="Product 3 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+3+Image+2" alt="Product 3 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+3+Image+3" alt="Product 3 Image 3">
+            </div>
+            <h3>Product 3</h3>
+            <p>Achieve clear skin with our acne-fighting facial cleanser.</p>
+            <p class="price">P250.50</p>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+4+Image+1" alt="Product 4 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+4+Image+2" alt="Product 4 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+4+Image+3" alt="Product 4 Image 3">
+            </div>
+            <h3>Product 4</h3>
+            <p>Deeply hydrate and nourish your skin with this soothing mask.</p>
+            <p class="price">P320.00</p>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+5+Image+1" alt="Product 5 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+5+Image+2" alt="Product 5 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+5+Image+3" alt="Product 5 Image 3">
+            </div>
+            <h3>Product 5</h3>
+            <p>Revitalize your skin with our rejuvenating serum for a fresh glow.</p>
+            <p class="price">P180.75</p>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+6+Image+1" alt="Product 6 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+6+Image+2" alt="Product 6 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+6+Image+3" alt="Product 6 Image 3">
+            </div>
+            <h3>Product 6</h3>
+            <p>Balance your skin's pH levels with this refreshing toner.</p>
+            <p class="price">P150.00</p>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+7+Image+1" alt="Product 7 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+7+Image+2" alt="Product 7 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+7+Image+3" alt="Product 7 Image 3">
+            </div>
+            <h3>Product 7</h3>
+            <p>Sooth and nourish your skin with our calming facial mist.</p>
+            <p class="price">P120.00</p>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+8+Image+1" alt="Product 8 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+8+Image+2" alt="Product 8 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+8+Image+3" alt="Product 8 Image 3">
+            </div>
+            <h3>Product 8</h3>
+            <p>Renew and rejuvenate your skin with our vitamin-rich mask.</p>
+            <p class="price">P250.50</p>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+9+Image+1" alt="Product 9 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+9+Image+2" alt="Product 9 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+9+Image+3" alt="Product 9 Image 3">
+            </div>
+            <h3>Product 9</h3>
+            <p>Exfoliate and brighten your skin with our facial scrub.</p>
+            <p class="price">P200.00</p>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product">
+            <div class="slideshow-container">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+10+Image+1" alt="Product 10 Image 1">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+10+Image+2" alt="Product 10 Image 2">
+                <img class="slide" src="https://via.placeholder.com/400x250?text=Product+10+Image+3" alt="Product 10 Image 3">
+            </div>
+            <h3>Product 10</h3>
+            <p>Revitalize your skin with this nourishing body lotion.</p>
+            <p class="price">P190.00</p>
+        </div>
+
+    </section>
+
+    <!-- Contact Information -->
+    <footer>
+        <p>Contact us: <a href="mailto:neoatlasaone@gmail.com">neoatlasaone@gmail.com</a> | Phone: 72553211, 71512885</p>
+        <p>Follow us: 
+            <a href="https://instagram.com/SaoSkincare" target="_blank">Instagram</a> |
+            <a href="https://facebook.com/SaoSkincare" target="_blank">Facebook</a> |
+            <a href="https://tiktok.com/@sao_skincare" target="_blank">TikTok</a>
+        </p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        // Function to show slides for each product
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds

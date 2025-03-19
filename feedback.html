@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improved Form</title>
+    <title>Enhanced Form</title>
     <style>
+        /* 🌟 General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZIa-ptSJ1CdfS4gzONNr1ttR1-qAN8sGpDyETmummx9-L1PNT5D4AmAk&s'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 50px 0;
             text-align: center;
-            padding: 20px;
+            transition: background 0.3s;
         }
 
+        /* Dark Mode */
+        body.dark-mode {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        /* Form Container */
         form {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             width: 40%;
             margin: auto;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
             text-align: left;
+            transition: background 0.3s;
         }
 
+        /* Dark Mode for Form */
+        body.dark-mode form {
+            background: rgba(50, 50, 50, 0.95);
+        }
+
+        /* Fieldset */
         fieldset {
             border: 2px solid #007BFF;
             border-radius: 5px;
@@ -32,17 +51,38 @@
         legend {
             font-weight: bold;
             color: #007BFF;
+            font-size: 1.2em;
         }
 
         label {
             font-weight: bold;
+            display: inline-block;
+            width: 140px;
+            text-align: right;
+            margin-right: 10px;
         }
 
-        input[type="text"], input[type="radio"] {
-            margin: 5px 0;
+        input[type="text"], input[type="email"], input[type="date"], input[type="file"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 60%;
+            margin-bottom: 10px;
         }
 
-        .submit-btn {
+        .radio-group {
+            margin-left: 150px;
+        }
+
+        /* Live Character Counter */
+        #charCount {
+            font-size: 12px;
+            color: gray;
+            margin-left: 150px;
+        }
+
+        /* Buttons */
+        .btn {
             background-color: #007BFF;
             color: white;
             border: none;
@@ -50,43 +90,113 @@
             cursor: pointer;
             border-radius: 5px;
             font-size: 16px;
+            margin-top: 10px;
         }
 
-        .submit-btn:hover {
+        .btn:hover {
             background-color: #0056b3;
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dark-mode-toggle:hover {
+            background: gray;
         }
     </style>
 </head>
 <body>
 
-    <form action="thank_you.php" method="post">
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <form action="thank_you.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
         <fieldset>
             <legend>Personal Information</legend>
 
-            <label for="firstname">First Name:</label><br>
-            <input type="text" id="firstname" name="firstname" required><br><br>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required oninput="countCharacters()">
+            <span id="charCount">0/50</span><br>
 
-            <label for="lastname">Last Name:</label><br>
-            <input type="text" id="lastname" name="lastname" required><br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required><br>
+
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><br>
         </fieldset>
 
         <fieldset>
             <legend>Gender</legend>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Male</label><br>
 
-            <input type="radio" id="male" name="gender" value="male" checked>
-            <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
 
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
         </fieldset>
 
-        <div style="text-align: center;">
-            <input type="submit" value="Submit" class="submit-btn">
-        </div>
+        <!-- Submit and Reset Buttons -->
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn">Clear Form</button>
     </form>
+
+    <script>
+        // 🌙 Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        // 📝 Live Character Counter for Name Field
+        function countCharacters() {
+            let input = document.getElementById("firstname");
+            let charCount = document.getElementById("charCount");
+            charCount.innerText = input.value.length + "/50";
+        }
+
+        // 🚀 Form Validation
+        function validateForm() {
+            let firstName = document.getElementById("firstname").value;
+            let email = document.getElementById("email").value;
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (firstName.length < 3) {
+                alert("First Name must be at least 3 characters long!");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 
 </body>
 </html>
+     
+
+       
+     
+

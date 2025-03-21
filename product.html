@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Skincare Products | Sao Skincare</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <style>
         /* Basic Styles */
         body {
@@ -71,23 +70,6 @@
             color: #e74c3c;
         }
 
-        .button-container {
-            margin-top: 10px;
-        }
-
-        .button-container button {
-            padding: 10px 20px;
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .button-container button:hover {
-            background-color: #34495e;
-        }
-
         footer {
             background-color: #2c3e50;
             color: white;
@@ -103,100 +85,92 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Sao Skincare</h1>
         <p>Explore Our Premium Skincare Products</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="products.html">Products</a>
-        </nav>
     </header>
 
-    <!-- Product Showcase Section -->
-    <section class="product-section">
-        <!-- Product 1 -->
-        <div class="product">
-            <img class="product-image" id="product-1-img" src="https://via.placeholder.com/300x200?text=Product+1+Image+1" alt="Product 1 Image">
-            <h3>Product 1</h3>
-            <p>Experience glowing skin with this luxurious moisturizer.</p>
-            <p class="price">P100.00</p>
-            <div class="button-container">
-                <button onclick="toggleProductImage('product-1')">View More Images</button>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Our Skincare Products</h2>
+        <div class="product-section">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm5vPsWoaOA81VED2G9nPN2UExhFdzpuDjg&s" alt="Product 1">
+                <h3>Hydrating Moisturizer</h3>
+                <p>A rich moisturizer to keep your skin hydrated and glowing.</p>
+                <p class="price">P150.00</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mXb8Se8ENvdugmMIGyzvxBeUTZ4qLtPh_A&s" alt="Product 2">
+                <h3>Anti-Aging Serum</h3>
+                <p>Reduces fine lines and wrinkles to give you youthful skin.</p>
+                <p class="price">P250.00</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpEXqBpocrpUo3kja8fxTs8W712AZXXdgoXg&s" alt="Product 3">
+                <h3>Brightening Cream</h3>
+                <p>Lightens dark spots and evens out skin tone.</p>
+                <p class="price">P180.00</p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeH5rX8Og5upyTp2qi8n8immV2jGLB4DU8tQ&s" alt="Product 4">
+                <h3>Refreshing Face Mist</h3>
+                <p>A revitalizing face mist for a fresh look throughout the day.</p>
+                <p class="price">P120.00</p>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0TMMjxdPaGgd6Kvc2h47w_GNT6g_OSRr0xg&s" alt="Product 5">
+                <h3>Night Repair Cream</h3>
+                <p>Rejuvenates skin overnight and reduces the signs of aging.</p>
+                <p class="price">P200.00</p>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOltV4w4wuW1wLrXjlR7F7S-hR3p4Q3I19Wg&s" alt="Product 6">
+                <h3>Exfoliating Scrub</h3>
+                <p>Gently exfoliates your skin to remove dead cells and impurities.</p>
+                <p class="price">P140.00</p>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpcMcRj2rV8USNRnC5OWdnb7ityvmE7tQyg&s" alt="Product 7">
+                <h3>UV Protection Sunscreen</h3>
+                <p>Protects your skin from harmful UV rays with SPF 50.</p>
+                <p class="price">P220.00</p>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCxmna8-Mj51d61rPqtR78dh4x4rcC7AasXE1prpAZLawcloOkhD0li58&s" alt="Product 8">
+                <h3>Vitamin C Serum</h3>
+                <p>Brightens and revitalizes the skin with a potent Vitamin C formula.</p>
+                <p class="price">P170.00</p>
             </div>
         </div>
+    </div>
 
-        <!-- Product 2 -->
-        <div class="product">
-            <img class="product-image" id="product-2-img" src="https://via.placeholder.com/300x200?text=Product+2+Image+1" alt="Product 2 Image">
-            <h3>Product 2</h3>
-            <p>Reduce fine lines and wrinkles with our anti-aging serum.</p>
-            <p class="price">P85.99</p>
-            <div class="button-container">
-                <button onclick="toggleProductImage('product-2')">View More Images</button>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product">
-            <img class="product-image" id="product-3-img" src="https://via.placeholder.com/300x200?text=Product+3+Image+1" alt="Product 3 Image">
-            <h3>Product 3</h3>
-            <p>Hydrating facial mist for a refreshing glow.</p>
-            <p class="price">P120.50</p>
-            <div class="button-container">
-                <button onclick="toggleProductImage('product-3')">View More Images</button>
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product">
-            <img class="product-image" id="product-4-img" src="https://via.placeholder.com/300x200?text=Product+4+Image+1" alt="Product 4 Image">
-            <h3>Product 4</h3>
-            <p>Deep cleanse and remove impurities with this facial scrub.</p>
-            <p class="price">P99.99</p>
-            <div class="button-container">
-                <button onclick="toggleProductImage('product-4')">View More Images</button>
-            </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="product">
-            <img class="product-image" id="product-5-img" src="https://via.placeholder.com/300x200?text=Product+5+Image+1" alt="Product 5 Image">
-            <h3>Product 5</h3>
-            <p>Revitalize your skin with our rejuvenating serum for a fresh glow.</p>
-            <p class="price">P180.75</p>
-            <div class="button-container">
-                <button onclick="toggleProductImage('product-5')">View More Images</button>
-            </div>
-        </div>
-
-        <!-- Add more products similarly... -->
-    </section>
-
-    <!-- Contact Information -->
     <footer>
-        <p>Contact us: <a href="mailto:neoatlasaone@gmail.com">neoatlasaone@gmail.com</a> | Phone: 72553211, 71512885</p>
-        <p>Follow us: 
-            <a href="https://instagram.com/SaoSkincare" target="_blank">Instagram</a> |
-            <a href="https://facebook.com/SaoSkincare" target="_blank">Facebook</a> |
-            <a href="https://tiktok.com/@sao_skincare" target="_blank">TikTok</a>
-        </p>
+        <p>© 2025 Sao Skincare. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // Toggle images for a specific product
-        function toggleProductImage(productId) {
-            let productImage = document.getElementById(`${productId}-img`);
-            let currentSrc = productImage.src;
-            
-            // Toggle between two images for the product
-            if (currentSrc.includes('Image+1')) {
-                productImage.src = `https://via.placeholder.com/300x200?text=${productId}+Image+2`;
-            } else {
-                productImage.src = `https://via.placeholder.com/300x200?text=${productId}+Image+1`;
-            }
-        }
-    </script>
 </body>
 </html>

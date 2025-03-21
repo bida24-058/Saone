@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +7,99 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
-        /* Existing Styles (unchanged) */
-        /* Same as your original CSS */
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            width: 220px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 15px 0 10px;
+            font-size: 18px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-container button:hover {
+            background-color: #34495e;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -28,44 +118,60 @@
     <section class="product-section">
         <!-- Product 1 -->
         <div class="product">
-            <div class="slideshow-container product-1">
-                <img class="slide" src="https://th.bing.com/th?id=OIP.-P-yxzjwWPi0IFw1f1a-iAHaI0&w=229&h=272&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Product 1 Image 1">
-                <img class="slide" src="https://th.bing.com/th?id=OIP.EbwO1cFGFhWmleOU8Cx1uQHaHX&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Product 1 Image 2">
-                <img class="slide" src="https://th.bing.com/th?id=OIP.ILfL9IcNlgfDQZfZSPB0XwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Product 1 Image 3">
-            </div>
+            <img class="product-image" id="product-1-img" src="https://via.placeholder.com/300x200?text=Product+1+Image+1" alt="Product 1 Image">
             <h3>Product 1</h3>
             <p>Experience glowing skin with this luxurious moisturizer.</p>
             <p class="price">P100.00</p>
+            <div class="button-container">
+                <button onclick="toggleProductImage('product-1')">View More Images</button>
+            </div>
         </div>
 
         <!-- Product 2 -->
         <div class="product">
-            <div class="slideshow-container product-2">
-                <img class="slide" src="https://th.bing.com/th/id/OIP.JO79r6hAiiEaDsK0Bsww9wHaHa?w=196&h=196&c=7&r=0&o=5&pid=1.7" alt="Product 2 Image 1">
-                <img class="slide" src="https://th.bing.com/th/id/OIP.sj4_T3PQNHJPoYG2VF_CUwAAAA?w=126&h=196&c=7&r=0&o=5&pid=1.7" alt="Product 2 Image 2">
-                <img class="slide" src="https://th.bing.com/th/id/OIP.t2S-aiFP5n4npQkj6wk26QHaEK?w=293&h=180&c=7&r=0&o=5&pid=1.7" alt="Product 2 Image 3">
-            </div>
+            <img class="product-image" id="product-2-img" src="https://via.placeholder.com/300x200?text=Product+2+Image+1" alt="Product 2 Image">
             <h3>Product 2</h3>
             <p>Reduce fine lines and wrinkles with our anti-aging serum.</p>
             <p class="price">P85.99</p>
+            <div class="button-container">
+                <button onclick="toggleProductImage('product-2')">View More Images</button>
+            </div>
         </div>
 
-        <!-- More Products... -->
+        <!-- Product 3 -->
+        <div class="product">
+            <img class="product-image" id="product-3-img" src="https://via.placeholder.com/300x200?text=Product+3+Image+1" alt="Product 3 Image">
+            <h3>Product 3</h3>
+            <p>Hydrating facial mist for a refreshing glow.</p>
+            <p class="price">P120.50</p>
+            <div class="button-container">
+                <button onclick="toggleProductImage('product-3')">View More Images</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img class="product-image" id="product-4-img" src="https://via.placeholder.com/300x200?text=Product+4+Image+1" alt="Product 4 Image">
+            <h3>Product 4</h3>
+            <p>Deep cleanse and remove impurities with this facial scrub.</p>
+            <p class="price">P99.99</p>
+            <div class="button-container">
+                <button onclick="toggleProductImage('product-4')">View More Images</button>
+            </div>
+        </div>
 
         <!-- Product 5 -->
         <div class="product">
-            <div class="slideshow-container product-5">
-                <img class="slide" src="https://th.bing.com/th/id/OIP.Kp9q6EmMQajsFJNbS0kXIQHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7" alt="Product 5 Image 1">
-                <img class="slide" src="https://th.bing.com/th?id=OIP.LDA6-rfl6C91HQQ4yh3OcQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Product 5 Image 2">
-                <img class="slide" src="https://th.bing.com/th?id=OIP.jzB4NkGfQ50TGNKodb2bdAHaUA&w=129&h=350&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Product 5 Image 3">
-            </div>
+            <img class="product-image" id="product-5-img" src="https://via.placeholder.com/300x200?text=Product+5+Image+1" alt="Product 5 Image">
             <h3>Product 5</h3>
             <p>Revitalize your skin with our rejuvenating serum for a fresh glow.</p>
             <p class="price">P180.75</p>
+            <div class="button-container">
+                <button onclick="toggleProductImage('product-5')">View More Images</button>
+            </div>
         </div>
 
-        <!-- More Products... -->
-
+        <!-- Add more products similarly... -->
     </section>
 
     <!-- Contact Information -->
@@ -79,26 +185,18 @@
     </footer>
 
     <script>
-        let slideIndex = 0;
-
-        // Function to show slides for each product
-        function showSlides(className) {
-            let slides = document.querySelectorAll(`.${className} .slide`);
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+        // Toggle images for a specific product
+        function toggleProductImage(productId) {
+            let productImage = document.getElementById(`${productId}-img`);
+            let currentSrc = productImage.src;
+            
+            // Toggle between two images for the product
+            if (currentSrc.includes('Image+1')) {
+                productImage.src = `https://via.placeholder.com/300x200?text=${productId}+Image+2`;
+            } else {
+                productImage.src = `https://via.placeholder.com/300x200?text=${productId}+Image+1`;
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(() => showSlides(className), 3000); // Change image every 3 seconds
         }
-
-        // Start the slideshow for each product
-        document.addEventListener("DOMContentLoaded", () => {
-            // Start slideshow for each product class
-            let productClasses = ['product-1', 'product-2', 'product-5'];  // Add all product class names here
-            productClasses.forEach(className => showSlides(className));
-        });
     </script>
 </body>
 </html>

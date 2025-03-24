@@ -40,6 +40,23 @@
             background: rgba(50, 50, 50, 0.95);
         }
 
+        /* Thank you message */
+        .thank-you {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        body.dark-mode .thank-you {
+            background: rgba(50, 50, 50, 0.95);
+            color: white;
+        }
+
         /* Fieldset */
         fieldset {
             border: 2px solid #007BFF;
@@ -120,7 +137,7 @@
     <!-- Dark Mode Toggle Button -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 
-    <form action="thank_you.html" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+    <form id="myForm" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Personal Information</legend>
 
@@ -160,6 +177,11 @@
         <button type="reset" class="btn">Clear Form</button>
     </form>
 
+    <div class="thank-you" id="thankYou">
+        <h2>Thank You!</h2>
+        <p>Your form has been submitted successfully.</p>
+    </div>
+
     <script>
         // 🌙 Dark Mode Toggle
         function toggleDarkMode() {
@@ -173,8 +195,10 @@
             charCount.innerText = input.value.length + "/50";
         }
 
-        // 🚀 Form Validation
-        function validateForm() {
+        // 🚀 Form Submission
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+            
             let firstName = document.getElementById("firstname").value;
             let email = document.getElementById("email").value;
             let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -189,13 +213,15 @@
                 return false;
             }
 
+            // Hide the form and show thank you message
+            document.getElementById('myForm').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+            
             return true;
-        }
+        });
     </script>
 
 </body>
 </html>
-
-       
      
 

@@ -4,7 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saoskincare - About</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Pink Theme Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 182, 193, 0.7);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: rgba(255, 182, 193, 0.3);
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: #d23669;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 182, 193, 0.5);
+            color: white;
+        }
+
+        .skincare {
+            background-color: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-button {
+            display: inline-block;
+            background-color: #ffb6c1;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .faq-button:hover {
+            background-color: #ff69b4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #ffb6c1;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        .values {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 15px;
+            margin: 10px;
+            flex: 1;
+            min-width: 150px;
+            background-color: rgba(255, 182, 193, 0.2);
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,15 +112,32 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="product.html"></a>
-     <a href="feedback.html"></a>
+        <a href="product.html">Products</a>
+        <a href="feedback.html">Feedback</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 
     <div class="skincare">
-        <h2>Our story</h2>
-        <p>"At Saoskincare, skincare is more than beauty—it’s self-care rooted in science and nature. Founded in 2024, we craft clean, effective formulas to help you achieve healthy, glowing skin. Every ingredient is chosen for its proven benefits, and every product is designed with sustainability in mind. Because your skin—and the planet—deserve better."</p>
+        <h2>Our Story</h2>
+        <p>"At Saoskincare, skincare is more than beauty—it's self-care rooted in science and nature. Founded in 2024, we craft clean, effective formulas to help you achieve healthy, glowing skin. Every ingredient is chosen for its proven benefits, and every product is designed with sustainability in mind. Because your skin—and the planet—deserve better."</p>
+        
+        <div class="values">
+            <div class="value-item">
+                <h3>🌿 Clean Ingredients</h3>
+                <p>No harsh chemicals</p>
+            </div>
+            <div class="value-item">
+                <h3>🐰 Cruelty-Free</h3>
+                <p>Never tested on animals</p>
+            </div>
+            <div class="value-item">
+                <h3>🔬 Science-Backed</h3>
+                <p>Dermatologist approved</p>
+            </div>
+        </div>
+        
+        <a href="faq.html" class="faq-button">Explore Our FAQs</a>
     </div>
 
     <footer>

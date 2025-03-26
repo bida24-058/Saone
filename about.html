@@ -38,8 +38,8 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 8px 15px;
+            border-radius: 25px;
             transition: all 0.3s ease;
         }
 
@@ -59,7 +59,7 @@
 
         .faq-button {
             display: inline-block;
-            background-color: #ffb6c1;
+            background-color: #ff69b4;
             color: white;
             padding: 12px 25px;
             margin-top: 20px;
@@ -70,12 +70,13 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            box-shadow: 0 3px 6px rgba(210, 54, 105, 0.2);
         }
 
         .faq-button:hover {
-            background-color: #ff69b4;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            background-color: #d23669;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(210, 54, 105, 0.3);
         }
 
         footer {
@@ -101,6 +102,50 @@
             min-width: 150px;
             background-color: rgba(255, 182, 193, 0.2);
             border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 182, 193, 0.3);
+        }
+
+        /* New floating FAQ button for mobile */
+        .floating-faq {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff69b4;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(210, 54, 105, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+            display: none; /* Hidden by default */
+        }
+
+        .floating-faq:hover {
+            background-color: #d23669;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 8px;
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+            
+            .floating-faq {
+                display: flex; /* Show on mobile */
+            }
         }
     </style>
 </head>
@@ -116,6 +161,7 @@
         <a href="feedback.html">Feedback</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="faq.html" class="faq-button">FAQ</a>
     </nav>
 
     <div class="skincare">
@@ -140,9 +186,24 @@
         <a href="faq.html" class="faq-button">Explore Our FAQs</a>
     </div>
 
+    <!-- Floating FAQ Button (Mobile Only) -->
+    <a href="faq.html" class="floating-faq">FAQ</a>
+
     <footer>
         <p>© 2025 Atlasaone Neo. All Rights Reserved.</p>
     </footer>
+
+    <!-- Smooth scroll script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

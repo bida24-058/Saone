@@ -110,7 +110,7 @@
             background-color: rgba(255, 182, 193, 0.3);
         }
 
-        /* New floating FAQ button for mobile */
+        /* Floating FAQ button */
         .floating-faq {
             position: fixed;
             bottom: 30px;
@@ -128,7 +128,6 @@
             box-shadow: 0 4px 10px rgba(210, 54, 105, 0.3);
             z-index: 100;
             transition: all 0.3s ease;
-            display: none; /* Hidden by default */
         }
 
         .floating-faq:hover {
@@ -141,10 +140,12 @@
                 margin: 0 8px;
                 padding: 6px 10px;
                 font-size: 14px;
+                display: inline-block;
+                margin-bottom: 5px;
             }
             
-            .floating-faq {
-                display: flex; /* Show on mobile */
+            .values {
+                flex-direction: column;
             }
         }
     </style>
@@ -186,24 +187,12 @@
         <a href="faq.html" class="faq-button">Explore Our FAQs</a>
     </div>
 
-    <!-- Floating FAQ Button (Mobile Only) -->
+    <!-- Floating FAQ Button -->
     <a href="faq.html" class="floating-faq">FAQ</a>
 
     <footer>
         <p>© 2025 Atlasaone Neo. All Rights Reserved.</p>
     </footer>
-
-    <!-- Smooth scroll script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>

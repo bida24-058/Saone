@@ -32,19 +32,28 @@
             height: 60px;
             width: auto;
             margin-right: 15px;
+            border-radius: 50%; /* Makes the logo circular */
+            border: 2px solid white; /* Adds a white border */
+            object-fit: cover; /* Ensures the image keeps its aspect ratio */
         }
         nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffff00;
         }
         .slideshow-container {
             width: 80%;
-            margin: auto;
+            margin: 20px auto;
             overflow: hidden;
             position: relative;
             max-height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .slide {
             width: 100%;
@@ -53,85 +62,133 @@
             height: 500px;
         }
         .promotions {
-            background: #ff66b2;
-            padding: 20px;
+            background: linear-gradient(to right, #ff66b2, #ff3399);
+            padding: 25px;
             color: white;
-            margin-top: 20px;
+            margin: 30px 0;
             font-size: 18px;
         }
         button {
             background: #ff3399;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
+            border-radius: 25px;
+            transition: all 0.3s;
+            margin-top: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
         button:hover {
             background: #e60073;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .product-section {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .product {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 30%;
-            margin: 10px;
+            min-width: 280px;
+            margin: 15px;
             text-align: center;
-            padding: 15px;
-            transition: transform 0.3s;
+            padding: 20px;
+            transition: all 0.3s;
         }
         .product:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
         .product img {
             width: 100%;
             border-radius: 10px;
             height: 200px;
             object-fit: cover;
+            margin-bottom: 15px;
         }
         .product h3 {
             font-size: 20px;
             color: #ff3399;
+            margin: 10px 0;
         }
         .product p {
             color: #555;
             font-size: 16px;
+            margin: 10px 0;
         }
         .product .price {
             color: #ff66b2;
             font-size: 18px;
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
         }
         footer {
-            background: #ff4d94;
+            background: linear-gradient(to right, #ff4d94, #ff0066);
             color: white;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 40px;
         }
         footer a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffff00;
+            text-decoration: underline;
         }
         .highlight {
             font-weight: bold;
             color: #ffff00;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+                padding: 5px;
+            }
+            .slideshow-container {
+                width: 95%;
+                height: 300px;
+            }
+            .slide {
+                height: 300px;
+            }
+            .product {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img class="logo" src="logo.jpeg" alt="Sao Skincare Logo">
+            <!-- Updated logo path - make sure logo.jpeg exists in your project directory -->
+            <img class="logo" src="logo.jpeg" alt="Sao Skincare Logo" onerror="this.src='https://via.placeholder.com/60?text=Sao+Logo'">
             <div>
                 <h1>Sao Skincare</h1>
                 <p>Elevate Your Skincare Ritual</p>
@@ -160,8 +217,34 @@
     <section class="promotions">
         <h2>Exclusive Deals & Discounts</h2>
         <p>Get up to <span class="highlight">50% OFF</span> on selected skincare bundles!</p>
+        <p>Limited time offer - shop now before it's gone!</p>
         <a href="product.html"><button>Shop Now</button></a>
     </section>
+
+    <!-- Product Showcase -->
+    <div class="product-section">
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Cleanser" alt="Facial Cleanser">
+            <h3>Gentle Facial Cleanser</h3>
+            <p>Our pH-balanced cleanser removes impurities without stripping skin</p>
+            <div class="price">$24.99</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Moisturizer" alt="Hydrating Moisturizer">
+            <h3>Hydrating Moisturizer</h3>
+            <p>24-hour hydration with hyaluronic acid and natural botanicals</p>
+            <div class="price">$29.99</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Serum" alt="Vitamin C Serum">
+            <h3>Vitamin C Serum</h3>
+            <p>Brightens skin and reduces appearance of dark spots</p>
+            <div class="price">$34.99</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
 
     <!-- Contact Information -->
     <footer>
@@ -175,6 +258,7 @@
     </footer>
 
     <script>
+        // Slideshow functionality
         let slideIndex = 0;
         showSlides();
 
@@ -188,6 +272,25 @@
             slides[slideIndex-1].style.display = "block";  
             setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
+
+        // Fallback for logo image
+        function checkLogo() {
+            const logo = document.querySelector('.logo');
+            fetch(logo.src)
+                .then(response => {
+                    if (!response.ok) {
+                        logo.src = 'https://via.placeholder.com/60?text=Sao+Logo';
+                    }
+                })
+                .catch(() => {
+                    logo.src = 'https://via.placeholder.com/60?text=Sao+Logo';
+                });
+        }
+
+        // Run logo check when page loads
+        window.addEventListener('load', checkLogo);
     </script>
 </body>
 </html>
+
+

@@ -19,21 +19,38 @@
             padding: 20px;
             color: white;
             font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .logo {
+            height: 60px;
+            width: auto;
+            margin-right: 15px;
         }
         nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
         .slideshow-container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             position: relative;
+            max-height: 500px;
         }
         .slide {
             width: 100%;
             display: none;
+            object-fit: cover;
+            height: 500px;
         }
         .promotions {
             background: #ff66b2;
@@ -49,6 +66,11 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e60073;
         }
         .product-section {
             display: flex;
@@ -64,10 +86,16 @@
             margin: 10px;
             text-align: center;
             padding: 15px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
         }
         .product img {
             width: 100%;
             border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
         }
         .product h3 {
             font-size: 20px;
@@ -81,6 +109,7 @@
             color: #ff66b2;
             font-size: 18px;
             margin-top: 10px;
+            font-weight: bold;
         }
         footer {
             background: #ff4d94;
@@ -93,18 +122,27 @@
             text-decoration: none;
             margin: 0 10px;
         }
+        .highlight {
+            font-weight: bold;
+            color: #ffff00;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sao Skincare</h1>
-        <p>Elevate Your Skincare Ritual</p>
+        <div class="logo-container">
+            <img class="logo" src="logo.jpg" alt="Sao Skincare Logo">
+            <div>
+                <h1>Sao Skincare</h1>
+                <p>Elevate Your Skincare Ritual</p>
+            </div>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
-            <a href="product.html">Products</a> <!-- Link to the product page -->
+            <a href="product.html">Products</a>
         </nav>
     </header>
 
@@ -113,10 +151,8 @@
         <img class="slide" src="https://th.bing.com/th/id/OIP.2dZ9B19-g_X6jp8OZrNA_wHaJ4?w=3467&h=4623&rs=1&pid=ImgDetMain" alt="Skincare Image 1">
         <img class="slide" src="https://i.ebayimg.com/images/g/SWIAAOSwy3RnnQXM/s-l500.webp" alt="Skincare Image 2">
         <img class="slide" src="https://i.ebayimg.com/images/g/RvMAAOSwEHJjx9fj/s-l1600.webp" alt="Skincare Image 3">
-        <!-- Add More Images -->
         <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuBR8Jbf_tb4-hti1gFwed6OiI3geGja6LoOMakOAFwKB0jhPPWzr_Vt8&s" alt="Product Image 4">
-        <img class="slide" src="https://imerikamarie.com/best-skincare-products-for-dry-skin/" alt="Product Image 5">
-        <!-- Fixed missing '=' in the src attribute below -->
+        <img class="slide" src="https://th.bing.com/th/id/OIP.8cYF4sGQ1TQJv3Ld9l2w5AHaE8?w=278&h=185&c=7&r=0&o=5&pid=1.7" alt="Skincare Products">
         <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAGbrKm-gZgQs-JyFpUSLSABv6Qc2sFZNgA&s" alt="Product Image 6">
     </div>
 
@@ -124,7 +160,6 @@
     <section class="promotions">
         <h2>Exclusive Deals & Discounts</h2>
         <p>Get up to <span class="highlight">50% OFF</span> on selected skincare bundles!</p>
-        <!-- Make button link to product page -->
         <a href="product.html"><button>Shop Now</button></a>
     </section>
 
@@ -136,6 +171,7 @@
             <a href="https://facebook.com/SaoSkincare" target="_blank">Facebook</a> |
             <a href="https://tiktok.com/@sao_skincare" target="_blank">TikTok</a>
         </p>
+        <p>&copy; 2023 Sao Skincare. All rights reserved.</p>
     </footer>
 
     <script>

@@ -110,6 +110,51 @@
             background-color: rgba(255, 182, 193, 0.3);
         }
 
+        /* Working Hours Section */
+        .hours-section {
+            background-color: rgba(255, 182, 193, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .hours-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .hours-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 182, 193, 0.5);
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .open {
+            background-color: #a8e6cf;
+            color: #1a5d3e;
+        }
+        
+        .closed {
+            background-color: #ffaaa5;
+            color: #a11a1a;
+        }
+
         /* Floating FAQ button */
         .floating-faq {
             position: fixed;
@@ -184,6 +229,44 @@
             </div>
         </div>
         
+        <!-- Working Hours Section -->
+        <div class="hours-section">
+            <h2>Our working  Hours</h2>
+            <div id="status-display">
+                <!-- Status will be inserted here by JavaScript -->
+            </div>
+            <table class="hours-table">
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>10:00 AM - 4:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+        </div>
+        
         <a href="faq.html" class="faq-button">Explore Our FAQs</a>
     </div>
 
@@ -193,6 +276,44 @@
     <footer>
         <p>© 2025 Atlasaone Neo. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Function to check if we're currently open
+        function checkOpenStatus() {
+            const now = new Date();
+            const day = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            
+            const statusElement = document.getElementById('status-display');
+            
+            // Check if it's Sunday
+            if (day === 0) {
+                statusElement.innerHTML = '<div class="status-indicator closed">We are currently closed</div>';
+                return;
+            }
+            
+            // Check Saturday hours
+            if (day === 6) {
+                if ((hours > 10 || (hours === 10 && minutes >= 0)) && (hours < 16)) {
+                    statusElement.innerHTML = '<div class="status-indicator open">We are currently open</div>';
+                } else if (hours < 10 || hours >= 16) {
+                    statusElement.innerHTML = '<div class="status-indicator closed">We are currently closed</div>';
+                }
+                return;
+            }
+            
+            // Check weekday hours (Monday to Friday)
+            if ((hours > 9 || (hours === 9 && minutes >= 0)) && (hours < 18)) {
+                statusElement.innerHTML = '<div class="status-indicator open">We are currently open</div>';
+            } else {
+                statusElement.innerHTML = '<div class="status-indicator closed">We are currently closed</div>';
+            }
+        }
+        
+        // Run the function when the page loads
+        window.onload = checkOpenStatus;
+    </script>
 
 </body>
 </html>

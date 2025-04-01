@@ -1,114 +1,219 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-
-    <!-- Adding some basic styling -->
+    <title>Contact Me - Sao Skincare</title>
     <style> 
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffe6f2;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
+            background-image: url('https://images.unsplash.com/photo-1556910638-9a8ccb1e4e1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
         }
+        
+        .overlay {
+            background-color: rgba(255, 230, 242, 0.85);
+            min-height: 100vh;
+        }
+        
         header {
-            background: #ff99cc;
-            padding: 20px;
+            background: linear-gradient(to right, #ff99cc, #ff66b2);
+            padding: 25px;
             color: white;
-            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+        
         nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        .slideshow-container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
         }
-        .slide {
-            width: 100%;
-            display: none;
+        
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
-        .promotions {
-            background: #ff66b2;
-            padding: 20px;
-            color: white;
-            margin-top: 20px;
+        
+        h1, h2 {
+            color: #ff3399;
+        }
+        
+        .contact-info {
+            margin-bottom: 40px;
+        }
+        
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
             font-size: 18px;
         }
-        button {
-            background: #ff3399;
+        
+        .contact-info a {
+            color: #ff3399;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: #ff0066;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #ff3399;
+        }
+        
+        input, textarea {
+            padding: 12px;
+            border: 2px solid #ffccdd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #ff3399;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 51, 153, 0.3);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        input[type="submit"] {
+            background: linear-gradient(to right, #ff3399, #ff66b2);
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px;
+            font-size: 18px;
             cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
+        
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #ff0066, #ff3399);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 51, 153, 0.3);
+        }
+        
         footer {
-            background: #ff4d94;
+            background: linear-gradient(to right, #ff4d94, #ff3399);
             color: white;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
         }
+        
         footer a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            margin: 15px 0;
+        }
+        
+        .social-icons a {
+            display: inline-block;
             margin: 0 10px;
+            font-size: 20px;
         }
     </style>
-    
+</head>
+
 <body>
+    <div class="overlay">
+        <header>
+            <h1>Contact Sao Skincare</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
-<header>
-    <h1>Contact Me</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <main>
+            <section class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you! Reach out to us for inquiries, product information, or skincare advice.</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:neoatlasaone@gmail.com">neoatlasaone@gmail.com</a></li>
+                    <li><strong>Phone:</strong> +267 71614129</li>
+                    <li><strong>Alternative Numbers:</strong> 72363655 / 71512688</li>
+                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/Saoskincare" target="_blank">Sao Skincare</a></li>
+                    <li><strong>Twitter:</strong> <a href="https://twitter.com/Saoskincare" target="_blank">@Saoskincare</a></li>
+                    <li><strong>Facebook:</strong> <a href="https://facebook.com/Saoskincare" target="_blank">Sao Skincare Page</a></li>
+                </ul>
+            </section>
 
-<main>
-    <section class="contact-info">
-        <h2>Contact Information</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email or through the contact form below:</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="neoatlasaone@gmail.com</a></li>
-            <li><strong>Phone:</strong> (126)71614129</li>
-            <li><strong>LinkedIn:</strong> <a href="https://Saoskincare" target="_blank">Your LinkedIn</a></li>
-            <li><strong>Twitter:</strong> <a href="https://twitter.com/Saoskincare" target="_blank">@Saoskincare</a></li>
-        </ul>
-    </section>
+            <section>
+                <h2>Send Us a Message</h2>
+                <form action="your-server-endpoint" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-    <section>
-        <h2>Send a Message</h2>
-        <form action="your-server-endpoint" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </section>
+        </main>
 
-            <input type="submit" value="Send Message">
-        </form>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 Atlasaone Neo. All rights reserved.</p>
-</footer>
-
+        <footer>
+            <div class="social-icons">
+                <a href="https://facebook.com/Saoskincare" target="_blank">Facebook</a>
+                <a href="https://twitter.com/Saoskincare" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/Saoskincare" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Atlasaone Neo - Sao Skincare. All rights reserved.</p>
+            <p>Contact: 72363655 / 71512688 | Email: neoatlasaone@gmail.com</p>
+        </footer>
+    </div>
 </body>
 
 </html>
-

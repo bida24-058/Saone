@@ -3,72 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Form</title>
+    <title>Sao Skincare Contact Form</title>
     <style>
-        /* 🌟 General Styles */
+        /* 🌸 Pink Skincare Theme */
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUi_k-91f93CFyxo-3pv16uHPuvcHQWNKdxJNSzkydH9PkmCx5I0C13Fk&s'); /* Replace with your image */
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             padding: 50px 0;
             text-align: center;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
 
         /* Dark Mode */
         body.dark-mode {
-            background: #1a1a1a;
-            color: white;
+            background-color: #1a1a1a;
+            color: #ffccdd;
+            background-image: url('https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         }
 
         /* Form Container */
         form {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 240, 245, 0.95);
             width: 40%;
             margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.2);
             text-align: left;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            border: 1px solid #ffccdd;
         }
 
         /* Dark Mode for Form */
         body.dark-mode form {
-            background: rgba(50, 50, 50, 0.95);
+            background: rgba(50, 30, 40, 0.95);
+            border-color: #d23669;
         }
 
         /* Thank you message */
         .thank-you {
             display: none;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 240, 245, 0.95);
             width: 40%;
             margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.2);
             text-align: center;
+            color: #d23669;
+            border: 1px solid #ffccdd;
         }
 
         body.dark-mode .thank-you {
-            background: rgba(50, 50, 50, 0.95);
-            color: white;
+            background: rgba(50, 30, 40, 0.95);
+            color: #ffccdd;
+            border-color: #d23669;
         }
 
         /* Fieldset */
         fieldset {
-            border: 2px solid #007BFF;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        body.dark-mode fieldset {
+            background-color: rgba(30, 20, 25, 0.7);
+            border-color: #d23669;
         }
 
         legend {
             font-weight: bold;
-            color: #007BFF;
+            color: #ff3399;
             font-size: 1.2em;
+            padding: 0 10px;
+        }
+
+        body.dark-mode legend {
+            color: #ff99cc;
         }
 
         label {
@@ -77,41 +94,86 @@
             width: 140px;
             text-align: right;
             margin-right: 10px;
+            color: #d23669;
         }
 
-        input[type="text"], input[type="email"], input[type="date"], input[type="file"] {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        body.dark-mode label {
+            color: #ff99cc;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="date"], 
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ffccdd;
+            border-radius: 8px;
             width: 60%;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        input[type="date"]:focus {
+            border-color: #ff69b4;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+            background-color: white;
+        }
+
+        body.dark-mode input[type="text"],
+        body.dark-mode input[type="email"],
+        body.dark-mode input[type="date"],
+        body.dark-mode input[type="file"] {
+            background-color: rgba(30, 20, 25, 0.8);
+            border-color: #d23669;
+            color: #ffccdd;
         }
 
         .radio-group {
             margin-left: 150px;
         }
 
+        /* Radio buttons */
+        input[type="radio"] {
+            accent-color: #ff69b4;
+            margin-right: 8px;
+        }
+
         /* Live Character Counter */
         #charCount {
             font-size: 12px;
-            color: gray;
+            color: #ff69b4;
             margin-left: 150px;
+            font-style: italic;
+        }
+
+        body.dark-mode #charCount {
+            color: #ff99cc;
         }
 
         /* Buttons */
         .btn {
-            background-color: #007BFF;
+            background: linear-gradient(to right, #ff69b4, #ff3399);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 25px;
             font-size: 16px;
-            margin-top: 10px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
-            background-color: #0056b3;
+            background: linear-gradient(to right, #ff3399, #d23669);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(210, 54, 105, 0.3);
         }
 
         /* Dark Mode Toggle */
@@ -119,20 +181,74 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: black;
+            background: linear-gradient(to right, #ff69b4, #ff3399);
             color: white;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 10px 15px;
+            border-radius: 25px;
             cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 100;
         }
 
         .dark-mode-toggle:hover {
-            background: gray;
+            background: linear-gradient(to right, #ff3399, #d23669);
+            transform: translateY(-2px);
+        }
+
+        /* Floating petals decoration */
+        .petal {
+            position: absolute;
+            background-color: rgba(255, 182, 193, 0.6);
+            border-radius: 50% 0 50% 50%;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form, .thank-you {
+                width: 85%;
+                padding: 20px;
+            }
+            
+            label {
+                display: block;
+                text-align: left;
+                width: auto;
+                margin-bottom: 5px;
+            }
+            
+            input[type="text"], 
+            input[type="email"], 
+            input[type="date"], 
+            input[type="file"] {
+                width: 95%;
+            }
+            
+            .radio-group {
+                margin-left: 0;
+            }
+            
+            #charCount {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Floating petals decoration -->
+    <div class="petal" style="width: 30px; height: 30px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+    <div class="petal" style="width: 40px; height: 40px; top: 20%; right: 8%; animation-delay: 1s;"></div>
+    <div class="petal" style="width: 25px; height: 25px; bottom: 15%; left: 7%; animation-delay: 2s;"></div>
+    <div class="petal" style="width: 35px; height: 35px; bottom: 25%; right: 10%; animation-delay: 3s;"></div>
 
     <!-- Dark Mode Toggle Button -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
@@ -180,12 +296,19 @@
     <div class="thank-you" id="thankYou">
         <h2>Thank You!</h2>
         <p>Your form has been submitted successfully.</p>
+        <p>We'll get back to you soon with skincare recommendations!</p>
     </div>
 
     <script>
         // 🌙 Dark Mode Toggle
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
+            const btn = document.querySelector('.dark-mode-toggle');
+            if (document.body.classList.contains("dark-mode")) {
+                btn.textContent = "☀️ Light Mode";
+            } else {
+                btn.textContent = "🌙 Dark Mode";
+            }
         }
 
         // 📝 Live Character Counter for Name Field
@@ -193,6 +316,15 @@
             let input = document.getElementById("firstname");
             let charCount = document.getElementById("charCount");
             charCount.innerText = input.value.length + "/50";
+            
+            // Change color when approaching limit
+            if (input.value.length > 40) {
+                charCount.style.color = "#ff3333";
+                charCount.style.fontWeight = "bold";
+            } else {
+                charCount.style.color = "#ff69b4";
+                charCount.style.fontWeight = "normal";
+            }
         }
 
         // 🚀 Form Submission
@@ -217,11 +349,22 @@
             document.getElementById('myForm').style.display = 'none';
             document.getElementById('thankYou').style.display = 'block';
             
+            // Add some visual effects
+            const thankYou = document.getElementById('thankYou');
+            thankYou.style.animation = "fadeIn 1s ease-out";
+            
             return true;
         });
-    </script>
 
+        // Add animation for thank you message
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
-     
-

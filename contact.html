@@ -12,23 +12,38 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-image: url('https://images.unsplash.com/photo-1556910638-9a8ccb1e4e1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
+            background-repeat: no-repeat;
         }
         
         .overlay {
-            background-color: rgba(255, 230, 242, 0.85);
+            background-color: rgba(255, 230, 242, 0.9);
             min-height: 100vh;
         }
         
         header {
-            background: linear-gradient(to right, #ff99cc, #ff66b2);
+            background: linear-gradient(135deg, #ff99cc, #ff66b2);
             padding: 25px;
             color: white;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         nav a {
@@ -39,27 +54,41 @@
             padding: 8px 15px;
             border-radius: 20px;
             transition: all 0.3s ease;
+            background-color: rgba(255,255,255,0.1);
         }
         
         nav a:hover {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
         }
         
         main {
             max-width: 800px;
             margin: 40px auto;
             padding: 30px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
         
         h1, h2 {
             color: #ff3399;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
         
         .contact-info {
             margin-bottom: 40px;
+            background-color: rgba(255, 204, 221, 0.2);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #ff3399;
         }
         
         .contact-info ul {
@@ -70,12 +99,19 @@
         .contact-info li {
             margin-bottom: 15px;
             font-size: 18px;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ffccdd;
+        }
+        
+        .contact-info li:last-child {
+            border-bottom: none;
         }
         
         .contact-info a {
             color: #ff3399;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-weight: bold;
         }
         
         .contact-info a:hover {
@@ -87,25 +123,32 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            background-color: rgba(255, 240, 245, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(255, 204, 221, 0.5);
         }
         
         label {
             font-weight: bold;
             color: #ff3399;
+            font-size: 1.1rem;
         }
         
         input, textarea {
-            padding: 12px;
+            padding: 12px 15px;
             border: 2px solid #ffccdd;
             border-radius: 8px;
             font-size: 16px;
             transition: all 0.3s ease;
+            background-color: rgba(255,255,255,0.8);
         }
         
         input:focus, textarea:focus {
             border-color: #ff3399;
             outline: none;
             box-shadow: 0 0 8px rgba(255, 51, 153, 0.3);
+            background-color: white;
         }
         
         textarea {
@@ -114,7 +157,7 @@
         }
         
         input[type="submit"] {
-            background: linear-gradient(to right, #ff3399, #ff66b2);
+            background: linear-gradient(135deg, #ff3399, #ff66b2);
             color: white;
             border: none;
             padding: 15px;
@@ -123,20 +166,35 @@
             border-radius: 8px;
             font-weight: bold;
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         input[type="submit"]:hover {
-            background: linear-gradient(to right, #ff0066, #ff3399);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 51, 153, 0.3);
+            background: linear-gradient(135deg, #ff0066, #ff3399);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 51, 153, 0.4);
         }
         
         footer {
-            background: linear-gradient(to right, #ff4d94, #ff3399);
+            background: linear-gradient(135deg, #ff4d94, #ff3399);
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             margin-top: 40px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.1;
+            z-index: -1;
         }
         
         footer a {
@@ -144,10 +202,12 @@
             text-decoration: none;
             margin: 0 15px;
             transition: all 0.3s ease;
+            font-weight: bold;
         }
         
         footer a:hover {
             text-decoration: underline;
+            transform: translateY(-2px);
         }
         
         .social-icons {
@@ -158,12 +218,55 @@
             display: inline-block;
             margin: 0 10px;
             font-size: 20px;
+            background-color: rgba(255,255,255,0.2);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-3px) scale(1.1);
+        }
+        
+        /* Floating petals decoration */
+        .petal {
+            position: absolute;
+            background-color: rgba(255, 182, 193, 0.6);
+            border-radius: 50% 0 50% 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                width: fit-content;
+            }
+            
+            .contact-info, form {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="overlay">
+        <!-- Floating petals decoration -->
+        <div class="petal" style="width: 30px; height: 30px; top: 10%; left: 5%; transform: rotate(45deg);"></div>
+        <div class="petal" style="width: 40px; height: 40px; top: 20%; right: 8%; transform: rotate(20deg);"></div>
+        <div class="petal" style="width: 25px; height: 25px; bottom: 15%; left: 7%; transform: rotate(60deg);"></div>
+        <div class="petal" style="width: 35px; height: 35px; bottom: 25%; right: 10%; transform: rotate(30deg);"></div>
+        
         <header>
             <h1>Contact Sao Skincare</h1>
             <nav>

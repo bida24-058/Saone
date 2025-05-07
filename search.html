@@ -42,12 +42,150 @@
         }
     </style>
 </head>
+
+    <title>GlowSkin - Search Skincare Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #faf3f0;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff85a2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .search-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .search-description {
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-container {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e8b4bc;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #ff85a2;
+            box-shadow: 0 0 10px rgba(255, 133, 162, 0.2);
+        }
+
+        .search-button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff6b8b;
+        }
+
+        .search-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .category-tag {
+            background-color: #f0e6ff;
+            color: #9b72cf;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-tag:hover {
+            background-color: #e2d1ff;
+        }
+    </style>
+</head>
 <body>
     <header class="header">
-        <div class="logo">S A O N E</div>
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
+        <div class="container">
+            <div class="logo">GlowSkin</div>
         </div>
     </header>
+
+    <section class="search-section">
+        <div class="container">
+            <h1 class="search-title">Find Your Perfect Skincare</h1>
+            <p class="search-description">
+                Search for products by name, ingredient, or concern. Discover cleansers, moisturizers, serums and more tailored to your skin type.
+            </p>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for products, ingredients (e.g. hyaluronic acid)...">
+                <button class="search-button">Search</button>
+            </div>
+
+            <div class="search-categories">
+                <div class="category-tag">Cleansers</div>
+                <div class="category-tag">Moisturizers</div>
+                <div class="category-tag">Serums</div>
+                <div class="category-tag">Sunscreen</div>
+                <div class="category-tag">Acne</div>
+                <div class="category-tag">Anti-aging</div>
+                <div class="category-tag">Sensitive Skin</div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

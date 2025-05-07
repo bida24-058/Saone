@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Brands | GlowCosmetics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #fff5f7;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        h1 {
+            color: #ff6b8b;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .alphabet-index {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ffc0cb;
+        }
+        
+        .letter-link {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #ffc0cb;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .letter-link:hover {
+            background-color: #ff6b8b;
+            transform: scale(1.1);
+        }
+        
+        .brands-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .letter-group {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 140, 0.1);
+        }
+        
+        .letter-title {
+            color: #ff6b8b;
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffc0cb;
+        }
+        
+        .brand-list {
+            list-style-type: none;
+        }
+        
+        .brand-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ffd6de;
+        }
+        
+        .brand-item:last-child {
+            border-bottom: none;
+        }
+        
+        .brand-link {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .brand-link:hover {
+            color: #ff6b8b;
+            padding-left: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .brands-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>All Brands</h1>
+        
+        <div class="alphabet-index">
+            <a href="#A" class="letter-link">A</a>
+            <a href="#B" class="letter-link">B</a>
+            <a href="#C" class="letter-link">C</a>
+            <a href="#D" class="letter-link">D</a>
+            <a href="#E" class="letter-link">E</a>
+            <a href="#F" class="letter-link">F</a>
+            <a href="#G" class="letter-link">G</a>
+            <a href="#H" class="letter-link">H</a>
+            <a href="#I" class="letter-link">I</a>
+            <a href="#J" class="letter-link">J</a>
+            <a href="#K" class="letter-link">K</a>
+            <a href="#N" class="letter-link">N</a>
+            <a href="#Y" class="letter-link">Y</a>
+        </div>
+        
+        <div class="brands-section">
+            <!-- Letter A -->
+            <div class="letter-group" id="A">
+                <h2 class="letter-title">A</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">AAVRANI</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">ABBOTT</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Act+Acre</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">advoca beauty</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter B -->
+            <div class="letter-group" id="B">
+                <h2 class="letter-title">B</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">BabylissPRO</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">bareMinerals</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">BASMA</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">BeautyBio</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Beautyblender</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter C -->
+            <div class="letter-group" id="C">
+                <h2 class="letter-title">C</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">calfray</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">CANOPY</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Carolina Herrera</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter D -->
+            <div class="letter-group" id="D">
+                <h2 class="letter-title">D</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">AERIN</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">AESTURA</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">ALPYN</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">ALTERNA Haircare</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter E -->
+            <div class="letter-group" id="E">
+                <h2 class="letter-title">E</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">Ami Cole</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">amika</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Anastasia Beverly Hills</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Aquis</a></li>
+                </ul>
+            </div>
+            
+            <!-- Continue with other letters... -->
+            <!-- Letter F -->
+            <div class="letter-group" id="F">
+                <h2 class="letter-title">F</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">Ami Giraffe</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Arman Beauty</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Artist Couture</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Augustinus Bader</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter G -->
+            <div class="letter-group" id="G">
+                <h2 class="letter-title">G</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">Beir</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Benefit Cosmetics</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Bio Ionic</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Biodance</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Biossance</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter H -->
+            <div class="letter-group" id="H">
+                <h2 class="letter-title">H</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">Blinc</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Bobbi Brown</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">BondiBoost</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">Boy Smells</a></li>
+                    <li class="brand-item"><a href="#" class="brand-link">BREAD BEAUTY SUPPLY</a></li>
+                </ul>
+            </div>
+            
+            <!-- Letter Y -->
+            <div class="letter-group" id="Y">
+                <h2 class="letter-title">Y</h2>
+                <ul class="brand-list">
+                    <li class="brand-item"><a href="#" class="brand-link">Azzaro</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

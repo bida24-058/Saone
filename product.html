@@ -4,125 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skincare Solutions | Sao Skincare</title>
-    <meta name="description" content="Premium skincare products tailored for every skin type - dry, oily, acne-prone, and hyperpigmentation">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS Variables */
-        :root {
-            --primary-pink: #ff3399;
-            --secondary-pink: #ff66b2;
-            --light-pink: #ffe6f2;
-            --dark-pink: #e60073;
-            --white: #ffffff;
-            --black: #333333;
-            --gray: #666666;
-            --light-gray: #f9f9f9;
-            --price-red: #e74c3c;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Basic Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: var(--light-gray);
-            color: var(--black);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
         }
 
-        /* Header Styles */
         header {
-            background: linear-gradient(to right, var(--primary-pink), var(--secondary-pink));
-            color: var(--white);
-            padding: 25px 20px;
+            background-color: #ff99cc;
+            color: white;
+            padding: 20px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 2.2em;
         }
 
-        header p {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        nav {
+            background-color: #ff66b2;
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(255, 105, 140, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            text-align: center;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 0 20px;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary-pink) transparent;
-        }
-
-        .nav-container::-webkit-scrollbar {
-            height: 5px;
-        }
-
-        .nav-container::-webkit-scrollbar-thumb {
-            background-color: var(--primary-pink);
-            border-radius: 10px;
-        }
-
-        .nav-menu {
-            display: inline-flex;
-            gap: 25px;
-        }
-
-        .nav-item {
-            color: var(--white);
+        nav a {
+            color: white;
+            margin: 0 15px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 5px 0;
-            position: relative;
-            transition: var(--transition);
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
 
-        .nav-item:hover {
-            color: var(--white);
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        nav a:hover {
+            color: #ffe6f2;
         }
 
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--white);
-            transition: var(--transition);
-        }
-
-        .nav-item:hover::after {
-            width: 100%;
-        }
-
-        /* Main Content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -131,46 +56,35 @@
 
         .skin-type-section {
             margin: 40px 0;
-            padding: 25px;
-            background-color: var(--white);
+            padding: 20px;
+            background-color: white;
             border-radius: 8px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .skin-type-section h2 {
-            color: var(--primary-pink);
-            border-bottom: 2px solid var(--light-pink);
+            color: #ff3399;
+            border-bottom: 2px solid #ffe6f2;
             padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+            margin-top: 0;
         }
 
-        .section-intro {
-            background-color: var(--light-pink);
-            padding: 15px 20px;
-            border-radius: 5px;
-            margin-bottom: 25px;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* Product Grid */
         .product-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
         }
 
         .product {
-            background-color: var(--white);
-            padding: 20px;
+            background-color: white;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            margin: 15px;
+            width: 220px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product:hover {
@@ -184,287 +98,311 @@
             object-fit: cover;
             border-radius: 5px;
             border: 1px solid #eee;
-            margin-bottom: 15px;
         }
 
         .product h3 {
-            margin: 0 0 10px;
-            font-size: 1.2rem;
-            color: var(--primary-pink);
-            flex-grow: 1;
+            margin: 15px 0 10px;
+            font-size: 1.1em;
+            color: #ff3399;
         }
 
         .product p {
-            font-size: 0.95rem;
-            color: var(--gray);
-            margin-bottom: 15px;
-            line-height: 1.5;
+            font-size: 0.9em;
+            color: #666;
+            min-height: 60px;
         }
 
         .price {
-            font-size: 1.2rem;
+            font-size: 1.1em;
             font-weight: bold;
-            color: var(--price-red);
+            color: #e74c3c;
             margin: 10px 0;
         }
 
         .benefits {
-            font-size: 0.85rem;
-            color: var(--gray);
+            font-size: 0.8em;
+            color: #888;
             font-style: italic;
             margin-top: 10px;
-            line-height: 1.5;
         }
 
-        /* Footer */
         footer {
-            background: linear-gradient(to right, var(--secondary-pink), var(--primary-pink));
-            color: var(--white);
+            background-color: #ff4d94;
+            color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
+            padding: 20px 0;
+            margin-top: 40px;
         }
 
         footer p {
-            margin: 8px 0;
-            font-size: 0.95rem;
+            margin: 5px 0;
         }
 
-        footer a {
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            .nav-menu {
-                gap: 15px;
-            }
-            
-            .nav-item {
-                font-size: 0.8rem;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            .skin-type-section {
-                padding: 20px 15px;
-                margin: 30px 0;
-            }
-            
-            .product-section {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .product {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.6rem;
-            }
-            
-            .nav-menu {
-                gap: 10px;
-            }
-            
-            .nav-item {
-                font-size: 0.75rem;
-            }
-            
-            .skin-type-section h2 {
-                font-size: 1.5rem;
-            }
+        .section-intro {
+            background-color: #ffe6f2;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Sao Skincare</h1>
         <p>Tailored Solutions for Every Skin Type</p>
     </header>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-menu">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="products.html" class="nav-item">Products</a>
-                <a href="feedback.html" class="nav-item">Feedback</a>
-                <a href="about.html" class="nav-item">About</a>
-                <a href="contact.html" class="nav-item">Contact</a>
-                <a href="signin.html" class="nav-item">Sign In</a>
-                <a href="search.html" class="nav-item">Search</a>
-            </div>
-        </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <div class="container">
         <!-- Dry Skin Section -->
-        <section class="skin-type-section">
+        <div class="skin-type-section">
             <h2>For Dry Skin</h2>
             <div class="section-intro">
                 <p>Nourish and hydrate your skin with our ultra-moisturizing formulas designed to replenish moisture and restore your skin's natural barrier.</p>
             </div>
             <div class="product-section">
                 <!-- Product 1 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/JQvHtFh.jpg" alt="Hydrating Moisturizer" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm5vPsWoaOA81VED2G9nPN2UExhFdzpuDjg&s" alt="Hydrating Moisturizer">
                     <h3>Intense Hydration Cream</h3>
                     <p>Deeply moisturizes dry skin with hyaluronic acid and shea butter.</p>
                     <p class="benefits">Benefits: 24-hour hydration • Reduces flakiness • Soothes irritation</p>
                     <p class="price">P150.00</p>
-                </article>
+                </div>
 
                 <!-- Product 2 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/KLmW5xU.jpg" alt="Nourishing Oil" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mXb8Se8ENvdugmMIGyzvxBeUTZ4qLtPh_A&s" alt="Nourishing Oil">
                     <h3>Nourishing Facial Oil</h3>
                     <p>Rich blend of botanical oils to replenish dry, dehydrated skin.</p>
                     <p class="benefits">Benefits: Locks in moisture • Improves elasticity • Non-greasy</p>
                     <p class="price">P180.00</p>
-                </article>
+                </div>
 
                 <!-- Product 3 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/MnDcY7G.jpg" alt="Overnight Mask" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0TMMjxdPaGgd6Kvc2h47w_GNT6g_OSRr0xg&s" alt="Overnight Mask">
                     <h3>Overnight Hydration Mask</h3>
                     <p>Works while you sleep to intensely moisturize dry skin.</p>
                     <p class="benefits">Benefits: Wake up glowing • Repairs moisture barrier • Calms redness</p>
                     <p class="price">P200.00</p>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
 
         <!-- Oily Skin Section -->
-        <section class="skin-type-section">
+        <div class="skin-type-section">
             <h2>For Oily Skin</h2>
             <div class="section-intro">
                 <p>Control shine and minimize pores with our oil-balancing products formulated to mattify without over-drying.</p>
             </div>
             <div class="product-section">
                 <!-- Product 1 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/QWErY9T.jpg" alt="Oil-Control Cleanser" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOltV4w4wuW1wLrXjlR7F7S-hR3p4Q3I19Wg&s" alt="Oil-Control Cleanser">
                     <h3>Oil-Control Cleanser</h3>
                     <p>Gel cleanser that removes excess oil without stripping skin.</p>
                     <p class="benefits">Benefits: Reduces shine • Minimizes pores • Prevents breakouts</p>
                     <p class="price">P130.00</p>
-                </article>
+                </div>
 
                 <!-- Product 2 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/RtUVh3J.jpg" alt="Mattifying Moisturizer" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeH5rX8Og5upyTp2qi8n8immV2jGLB4DU8tQ&s" alt="Mattifying Moisturizer">
                     <h3>Mattifying Moisturizer</h3>
                     <p>Lightweight hydration that controls oil production.</p>
                     <p class="benefits">Benefits: Oil-free • Non-comedogenic • SPF 30</p>
                     <p class="price">P170.00</p>
-                </article>
+                </div>
 
                 <!-- Product 3 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/SfTkLmX.jpg" alt="Clay Mask" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpcMcRj2rV8USNRnC5OWdnb7ityvmE7tQyg&s" alt="Clay Mask">
                     <h3>Purifying Clay Mask</h3>
                     <p>Deep cleanses pores and absorbs excess oil.</p>
                     <p class="benefits">Benefits: Detoxifies • Refines pores • Controls shine</p>
                     <p class="price">P160.00</p>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
 
         <!-- Acne-Prone Skin Section -->
-        <section class="skin-type-section">
+        <div class="skin-type-section">
             <h2>For Acne-Prone Skin</h2>
             <div class="section-intro">
                 <p>Combat breakouts and prevent future acne with our gentle yet effective acne solutions.</p>
             </div>
             <div class="product-section">
                 <!-- Product 1 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/TgHvWbY.jpg" alt="Acne Treatment" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpEXqBpocrpUo3kja8fxTs8W712AZXXdgoXg&s" alt="Acne Treatment">
                     <h3>Acne Treatment Serum</h3>
                     <p>Powerful yet gentle formula with salicylic acid and tea tree oil.</p>
                     <p class="benefits">Benefits: Reduces inflammation • Unclogs pores • Prevents new breakouts</p>
                     <p class="price">P190.00</p>
-                </article>
+                </div>
 
                 <!-- Product 2 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/UjXnZqQ.jpg" alt="Spot Treatment" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCxmna8-Mj51d61rPqtR78dh4x4rcC7AasXE1prpAZLawcloOkhD0li58&s" alt="Spot Treatment">
                     <h3>Rapid Spot Treatment</h3>
                     <p>Targets individual blemishes for faster healing.</p>
                     <p class="benefits">Benefits: Overnight results • Reduces redness • Non-drying</p>
                     <p class="price">P120.00</p>
-                </article>
+                </div>
 
                 <!-- Product 3 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/VkYlAbC.jpg" alt="Acne Moisturizer" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mXb8Se8ENvdugmMIGyzvxBeUTZ4qLtPh_A&s" alt="Acne Moisturizer">
                     <h3>Acne Control Moisturizer</h3>
                     <p>Hydrates while treating and preventing breakouts.</p>
                     <p class="benefits">Benefits: Oil-free • Contains niacinamide • Soothes irritation</p>
                     <p class="price">P160.00</p>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
 
         <!-- Dark Spots Section -->
-        <section class="skin-type-section">
+        <div class="skin-type-section">
             <h2>For Dark Spots & Hyperpigmentation</h2>
             <div class="section-intro">
                 <p>Brighten and even out your skin tone with our targeted solutions for hyperpigmentation.</p>
             </div>
             <div class="product-section">
                 <!-- Product 1 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/WmXpDzR.jpg" alt="Vitamin C Serum" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCxmna8-Mj51d61rPqtR78dh4x4rcC7AasXE1prpAZLawcloOkhD0li58&s" alt="Vitamin C Serum">
                     <h3>Vitamin C Brightening Serum</h3>
                     <p>Potent antioxidant formula to fade dark spots.</p>
                     <p class="benefits">Benefits: Evens skin tone • Boosts radiance • Protects from free radicals</p>
                     <p class="price">P220.00</p>
-                </article>
+                </div>
 
                 <!-- Product 2 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/XnYsZzA.jpg" alt="Dark Spot Corrector" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpcMcRj2rV8USNRnC5OWdnb7ityvmE7tQyg&s" alt="Dark Spot Corrector">
                     <h3>Dark Spot Corrector</h3>
                     <p>Clinical-strength treatment for stubborn discoloration.</p>
                     <p class="benefits">Benefits: Visible results in 4 weeks • Gentle enough for daily use</p>
                     <p class="price">P250.00</p>
-                </article>
+                </div>
 
                 <!-- Product 3 -->
-                <article class="product">
-                    <img src="https://i.imgur.com/YbZcDfE.jpg" alt="Brightening Mask" loading="lazy">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm5vPsWoaOA81VED2G9nPN2UExhFdzpuDjg&s" alt="Brightening Mask">
                     <h3>Brightening Sheet Mask</h3>
                     <p>Instant radiance boost with continuous brightening benefits.</p>
                     <p class="benefits">Benefits: One-time use • Intensive treatment • Immediate glow</p>
                     <p class="price">P90.00 per mask</p>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
     </div>
+
+
+    <title>Pink Beauty Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #fff5f7;
+        }
+        
+        .navbar {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(255, 105, 140, 0.2);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0 20px;
+        }
+        
+        .nav-container::-webkit-scrollbar {
+            height: 5px;
+        }
+        
+        .nav-container::-webkit-scrollbar-thumb {
+            background-color: #ff85a2;
+            border-radius: 10px;
+        }
+        
+        .nav-menu {
+            display: inline-flex;
+            gap: 25px;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-item:hover::after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 15px;
+            }
+            .nav-item {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+    
 
     <footer>
         <p>© 2025 Sao Skincare. All Rights Reserved.</p>
-        <p>Contact us: <a href="mailto:hello@saoskincare.com">hello@saoskincare.com</a> | Phone: +267 71614129</p>
+        <p>Contact us: hello@saoskincare.com | Phone:+267 71614129</p>
     </footer>
+
 </body>
 </html>
